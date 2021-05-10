@@ -11,8 +11,8 @@ let chars = () => {
         letterBank.append(buttons)
         let clickedButton = buttons.innerHTML
         buttons.classList.add("buttonstyle") // sets class of buttonstyle to buttons when iterating over letters array
-        buttons.addEventListener("click", () => {buttonClicked(clickedButton)}
-        // on click it checks if letter is present in correctAnswer string 
+        buttons.addEventListener("click", () => {buttonClicked(clickedButton)} // when clicked event checks if letter is present in correctAnswer string 
+
         )
     }
 }
@@ -22,11 +22,16 @@ let prediction = []; // will hold the users selected chars
 let guessWordStatus = null;
 
 let wordBank = [
-    ["skateboarding", "rugby", "taekwondo", "weightlifting", "equestrian", "handball", "pentathlon","badminton"
-], ["nonstop","forever", "controlla", "Headlines", "omerta", "over", "jungle", "uptown", "Legend", "sucessful", 
-"fear", "passionfruit", "HYFR", "Poundcake"
-], ["gerrymandering", "onomatopoeia", "effervescent", "dastardly", "quintessential", "sanctimonious", "equilibrium"
-]
+    ["skateboarding", "rugby", "taekwondo", 
+    "weightlifting", "equestrian", "handball", 
+    "pentathlon","badminton"], 
+    ["nonstop","forever", "controlla", "Headlines",
+    "omerta", "over", "jungle",
+    "uptown", "Legend", "sucessful", "fear",
+    "passionfruit", "HYFR", "Poundcake"],
+    ["gerrymandering", "onomatopoeia", "effervescent",
+    "dastardly", "quintessential", "sanctimonious",
+    "equilibrium"]
 ];
      // TODO if category choosen display category in a tag on page  
 let chooseWord = () => {
@@ -34,33 +39,35 @@ let chooseWord = () => {
     let chosenCategory = wordBank[Math.floor(Math.random() * wordBank.length)]
     correctAnswer = chosenCategory[Math.floor(Math.random() * wordBank.length)].toUpperCase()
     if(chosenCategory === wordBank[0]){
-        console.log("Olympic Sports")
-        document.querySelector("img").src = "images/olympics.png"
-        document.getElementById("category").innerHTML = "The category is 'Olympic Sports'"
+        document.querySelector("img").src = 
+        "images/olympics.png"
+        document.getElementById("category").innerHTML = 
+        "The category is 'Olympic Sports'"
     }else if (chosenCategory === wordBank[1]){
-        console.log("Drake Songs")
-        document.querySelector("img").src = "images/giphy.gif"
-        document.getElementById("category").innerHTML = "The category is 'Drake Songs'"
+        document.querySelector("img").src = 
+        "images/giphy.gif"
+        document.getElementById("category").innerHTML = 
+        "The category is 'Drake Songs'"
     }else if (chosenCategory === wordBank[2]){
-        console.log("Bad Ass Words")
-        document.getElementById("category").innerHTML = "The category is 'Bad Ass Words'"
+        document.getElementById("category").innerHTML = 
+        "The category is 'Bad Ass Words'"
     }
-    console.log(correctAnswer)
     return correctAnswer
 }
 
 let guessWord = () =>{
     // sets value of guesswordstatus and swaps letters for underlines
-    guessWordStatus = correctAnswer.split("").map(letter => (prediction.indexOf(letter) >= 0 ? letter : " __ ")).join("")
+    guessWordStatus = correctAnswer.split("").map(letter => 
+        (prediction.indexOf(letter) >= 0 ? letter : " __ ")).join("")
     document.getElementById("answer").innerHTML = guessWordStatus
-    console.log(guessWordStatus)
     if(guessWordStatus === correctAnswer){
-    document.getElementById("blink").innerHTML = "WINNER"
+        // winning condition
+    document.getElementById("blink").innerHTML = "WINNER !!!"
     }
 }
 
 let buttonClicked = (clickedButton) =>{
-        prediction.indexOf(clickedButton) === -1 ? prediction.push(clickedButton) : null; //if button clicked doesnt exist in word push clicked button to incorrect array and set button null
+        prediction.indexOf(clickedButton) === -1 ? prediction.push(clickedButton) : null; //if button clicked doesn't exist in word push clicked button to incorrect array and set button null
         if(correctAnswer.indexOf(clickedButton) >= 0){ // if clicked button is correct update wordd to display button selected
             document.getElementById("blink").innerHTML = "Good guess"
                 guessWord()
@@ -87,11 +94,9 @@ let reset = () => {
     location.reload()
 }
 // TODO 
-// CRAETE WINNING CONDITION
-// swap alerts for modals
+// decide on wether i want to hang a man
 // STYLE WITH HANGMAN ANIMATION 
 // make mobile friendly
-// decide on wether i want to hang a man
 
 
        
