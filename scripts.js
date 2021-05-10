@@ -34,11 +34,11 @@ let chooseWord = () => {
     correctAnswer = chosenCategory[Math.floor(Math.random() * wordBank.length)].toUpperCase()
     if(chosenCategory === wordBank[0]){
         console.log("Olympic Sports")
-        document.querySelector("img").src = "/olympics.png"
+        document.querySelector("img").src = "images/olympics.png"
         document.getElementById("category").innerHTML = "The category is 'Olympic Sports'"
     }else if (chosenCategory === wordBank[1]){
         console.log("Drake Songs")
-        document.querySelector("img").src = "/giphy.gif"
+        document.querySelector("img").src = "images/giphy.gif"
         document.getElementById("category").innerHTML = "The category is 'Drake Songs'"
     }else if (chosenCategory === wordBank[2]){
         console.log("Bad Ass Words")
@@ -50,8 +50,12 @@ let chooseWord = () => {
 
 let guessWord = () =>{
     // sets value of guesswordstatus and swaps letters for underlines
-    guessWordStatus = correctAnswer.split("").map(letter => (prediction.indexOf(letter) >= 0 ? letter : " _ ")).join("")
+    guessWordStatus = correctAnswer.split("").map(letter => (prediction.indexOf(letter) >= 0 ? letter : " __ ")).join("")
     document.getElementById("answer").innerHTML = guessWordStatus
+    console.log(guessWordStatus)
+    if(guessWordStatus === correctAnswer){
+    console.log("winner")
+    }
 }
 
 let buttonClicked = (clickedButton) =>{
