@@ -1,0 +1,99 @@
+
+:root {
+    font-family: 'Rock Salt', cursive;
+    max-width: 100vw;
+    min-width: 50vw;
+    max-height: 100vh;
+    min-height: 50vh;
+    background-color: black;
+    display: flexbox;
+    /* position: relative; */
+    
+    
+}
+body{
+    text-align: center;
+}
+/* #game{
+    display: flexbox;
+} */
+#letterBank {
+    display: inline-block;
+    row-gap: 1;
+
+    
+  }
+  #guesswordcontainer{
+      padding-top: 20%;
+      text-align: center;
+  }
+  .glow {
+    /* display: flexbox; */
+    /* font-size: 25px; */
+    color: #fff;
+    /* text-align: center; */
+    animation: glow  ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #c1ff4d, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  
+  h1{
+      font-style: bold;
+  }
+  h2{
+      text-decoration: underline;
+      text-decoration-style: wavy;
+  }
+  h3{
+      float: right;
+      padding-top: 10%;
+      padding-right: 5%;
+  }
+  h4{
+      float: left;
+      padding-top: 10%;
+      padding-left: 5%;
+  }
+  /* #guesswordcontainer{
+    text-align: center;
+    display: flexbox;
+  } */
+  .buttonstyle{
+      color: coral;
+      margin: 1%;
+      background-color: black;
+      padding: 15px; ;
+      font-size: 11px;
+      border-radius: 75%;
+      box-shadow: mediumvioletred;
+      transform: scale(1.1);
+      cursor: crosshair;
+      font-family: 'Rock Salt', cursive;;
+
+      
+  }
+  .glow {
+      display: block;
+      /* row-gap: 1; */
+  }
+  #reset{
+      margin-bottom: 5%;
+  }
+@media (max-width: 100px){
+body{
+    background-color: white;
+    color: black; 
+    display: inline-flexbox;
+}
+.buttonstyle{
+    display: inline-flexbox;
+}
+}
