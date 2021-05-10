@@ -23,7 +23,8 @@ let guessWordStatus = null;
 
 let wordBank = [
     ["skateboarding", "rugby", "taekwondo", "weightlifting", "equestrian", "handball", "pentathlon","badminton"
-], ["nonstop","forever", "controlla", "Headlines", "omerta", "over", "jungle", "uptown", "Legend", "sucessful", "fear", "passionfruit", "HYFR", "Poundcake"
+], ["nonstop","forever", "controlla", "Headlines", "omerta", "over", "jungle", "uptown", "Legend", "sucessful", 
+"fear", "passionfruit", "HYFR", "Poundcake"
 ], ["gerrymandering", "onomatopoeia", "effervescent", "dastardly", "quintessential", "sanctimonious", "equilibrium"
 ]
 ];
@@ -54,22 +55,22 @@ let guessWord = () =>{
     document.getElementById("answer").innerHTML = guessWordStatus
     console.log(guessWordStatus)
     if(guessWordStatus === correctAnswer){
-    console.log("winner")
+    document.getElementById("blink").innerHTML = "WINNER"
     }
 }
 
 let buttonClicked = (clickedButton) =>{
         prediction.indexOf(clickedButton) === -1 ? prediction.push(clickedButton) : null; //if button clicked doesnt exist in word push clicked button to incorrect array and set button null
         if(correctAnswer.indexOf(clickedButton) >= 0){ // if clicked button is correct update wordd to display button selected
+            document.getElementById("blink").innerHTML = "Good guess"
                 guessWord()
         }else if(correctAnswer.indexOf(clickedButton) === -1){
-            alert(`The letter "${clickedButton}" doesn't exist please try again`)
+            document.getElementById("blink").innerHTML = "Try Again"
             document.getElementById("wrong").innerHTML = `Last Wrong Letter : ${clickedButton}`
             totalGuess -=1
             document.getElementById("lives").innerHTML = `Lives: ${totalGuess}`
         if(totalGuess <= 0){
-            alert("Game Over Loser")
-            reset()
+           document.getElementById("blink").innerHTML = "YOU LOSE GAME OVER"
         }
         
     }
