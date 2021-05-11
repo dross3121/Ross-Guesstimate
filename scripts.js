@@ -11,12 +11,9 @@ let chars = () => {
         letterBank.append(buttons)
         let clickedButton = buttons.innerHTML
         buttons.classList.add("buttonstyle") // sets class of buttonstyle to buttons when iterating over letters array
-        buttons.addEventListener("click", () => {buttonClicked(clickedButton)} // when clicked event checks if letter is present in correctAnswer string 
-
-        )
+        buttons.addEventListener("click", () => {buttonClicked(clickedButton)} ) // when clicked event checks if letter is present in correctAnswer string  
     }
 }
-chars()
 
 let correctAnswer = '';
 let totalGuess = 6; // number of guesses user starts with
@@ -35,8 +32,8 @@ let wordBank = [
     "dastardly", "quintessential", "sanctimonious",
     "equilibrium"]
 ];
-     // TODO if category choosen display category in a tag on page  
-let chooseWord = () => {
+
+let picksWord = () => {
     // selects a random category and random word from that catgory and displays picture associated with that category
     let chosenCategory = wordBank[Math.floor(Math.random() * wordBank.length)]
     correctAnswer = chosenCategory[Math.floor(Math.random() * wordBank.length)].toUpperCase()
@@ -56,52 +53,53 @@ let chooseWord = () => {
     }
     return correctAnswer
 }
-chooseWord()
 
 let guessWord = () =>{
     // sets value of guesswordstatus and swaps letters for underlines
     guessWordStatus = correctAnswer.split("").map(letter => 
         (prediction.indexOf(letter) >= 0 ? letter : " __ ")).join("")
-    document.getElementById("answer").innerHTML = guessWordStatus
-    if(guessWordStatus === correctAnswer){
-        // winning condition
-    document.getElementById("blink").innerHTML = "WINNER !!!"
+        document.getElementById("answer").innerHTML = guessWordStatus
+        if(guessWordStatus === correctAnswer){
+            // winning condition
+            document.getElementById("blink").innerHTML = "WINNER !!!"
+        }
     }
-}
-
-guessWord()
-
-let buttonClicked = (clickedButton) =>{
+        
+    let buttonClicked = (clickedButton) =>{
         prediction.indexOf(clickedButton) === -1 ? prediction.push(clickedButton) : null; //if button clicked doesn't exist in word push clicked button to incorrect array and set button null
-        if(correctAnswer.indexOf(clickedButton) >= 0){ // if clicked button is correct update wordd to display button selected
+        if(correctAnswer.indexOf(clickedButton) >= 0){ // if clicked button is correct update word to display button selected
             document.getElementById("blink").innerHTML = "Good guess"
-                guessWord()
-        }else if(correctAnswer.indexOf(clickedButton) === -1){
+            guessWord()
+        }if(correctAnswer.indexOf(clickedButton) === -1){
             document.getElementById("blink").innerHTML = "Try Again"
             document.getElementById("wrong").innerHTML = `Last Wrong Letter : ${clickedButton}`
             totalGuess -=1
             document.getElementById("lives").innerHTML = `Lives: ${totalGuess}`
-        if(totalGuess <= 0){
-           document.getElementById("blink").innerHTML = "YOU LOSE GAME OVER"
+        }if(totalGuess <= 0){
+            document.getElementById("blink").innerHTML = "YOU LOSE GAME OVER"
+            setTimeout(reset, 7000)
         }
         
     }
     
-}
+    document.getElementById("wrong").innerHTML = `Last Wrong Letter : `
+    document.getElementById("lives").innerHTML = `Lives : ${totalGuess}` // updating lives
+    
+    
+    
+    let resetButton = document.getElementById("reset") // reset game button
+    let reset = () => {
+        location.reload()
+    }
 
-document.getElementById("wrong").innerHTML = `Last Wrong Letter : `
-document.getElementById("lives").innerHTML = `Lives : ${totalGuess}` // updating lives
+    chars()
+    picksWord()
+    guessWord()
 
-
-
-let resetButton = document.getElementById("reset") // reset game button
-let reset = () => {
-    location.reload()
-}
-// TODO 
-// decide on whether i want to hang a man
-// STYLE WITH HANGMAN ANIMATION 
-// make mobile friendly
-
-
-       
+    // TODO 
+    // decide on whether i want to hang a man
+    // STYLE WITH HANGMAN ANIMATION 
+    // make mobile friendly
+    
+    
+    

@@ -6,10 +6,7 @@
     max-height: 80vh;
     min-height: 50vh;
     background-color: black;
-    display: flexbox;
-    /* position: relative; */
-    
-    
+    display: flexbox;    
 }
 body{
     text-align: center;
@@ -28,10 +25,10 @@ body{
   }
   #blink {
     animation: blink 3s infinite;
-    color: tomato;
+    color: red;
   }
   h1{
-    animation: blink 3s infinite;
+    animation: blink 10s ;
     color: tomato;
   }
   
@@ -83,7 +80,7 @@ body{
       border-radius: 75%;
       box-shadow: mediumvioletred;
       transform: scale(1.1);
-      cursor: crosshair;
+      cursor: pointer;
       font-family: 'Rock Salt', cursive;;
 
       
