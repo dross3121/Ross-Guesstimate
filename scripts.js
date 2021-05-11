@@ -16,7 +16,9 @@ let chars = () => {
         )
     }
 }
-var correctAnswer = '';
+chars()
+
+let correctAnswer = '';
 let totalGuess = 6; // number of guesses user starts with
 let prediction = []; // will hold the users selected chars
 let guessWordStatus = null;
@@ -54,6 +56,7 @@ let chooseWord = () => {
     }
     return correctAnswer
 }
+chooseWord()
 
 let guessWord = () =>{
     // sets value of guesswordstatus and swaps letters for underlines
@@ -65,6 +68,8 @@ let guessWord = () =>{
     document.getElementById("blink").innerHTML = "WINNER !!!"
     }
 }
+
+guessWord()
 
 let buttonClicked = (clickedButton) =>{
         prediction.indexOf(clickedButton) === -1 ? prediction.push(clickedButton) : null; //if button clicked doesn't exist in word push clicked button to incorrect array and set button null
@@ -94,12 +99,9 @@ let reset = () => {
     location.reload()
 }
 // TODO 
-// decide on wether i want to hang a man
+// decide on whether i want to hang a man
 // STYLE WITH HANGMAN ANIMATION 
 // make mobile friendly
 
 
        
-chars()
-chooseWord()
-guessWord()
