@@ -26,7 +26,7 @@ let answerBank = [
     "pentathlon","badminton"], 
     ["nonstop","forever", "controlla", "Headlines",
     "omerta", "over", "jungle",
-    "uptown", "Legend", "sucessful", "fear",
+    "uptown", "Legend", "successful", "fear",
     "passionfruit", "HYFR", "Poundcake"],
     ["gerrymandering", "onomatopoeia", "effervescent",
     "dastardly", "quintessential", "sanctimonious",
@@ -36,7 +36,8 @@ let answerBank = [
 let picksWord = () => {
     // selects a random category and random word from that catgory and displays picture associated with that category
     let chosenCategory = answerBank[Math.floor(Math.random() * answerBank.length)]
-    answer = chosenCategory[Math.floor(Math.random() * answerBank.length)].toUpperCase()
+    answer = chosenCategory[Math.floor(Math.random() * chosenCategory.length)].toUpperCase()
+    console.log(answer)
     if(chosenCategory === answerBank[0]){
         document.querySelector("img").src = 
         "images/olympics.png"
