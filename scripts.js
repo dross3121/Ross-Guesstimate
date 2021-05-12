@@ -62,6 +62,7 @@ let guessWord = () =>{
         if(word === answer){
             // winning condition
             document.getElementById("blink").innerHTML = "WINNER !!!"
+            setTimeout(reset, 7000)
         }
     }
 
