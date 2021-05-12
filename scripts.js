@@ -41,15 +41,15 @@ let picksWord = () => {
         document.querySelector("img").src = 
         "images/olympics.png"
         document.getElementById("category").innerHTML = 
-        "The category is 'Olympic Sports'"
+        "The category is 'Olympics'"
     }else if (chosenCategory === answerBank[1]){
         document.querySelector("img").src = 
         "images/giphy.gif"
         document.getElementById("category").innerHTML = 
-        "The category is 'Drake Songs'"
+        "The category is 'Drake'"
     }else if (chosenCategory === answerBank[2]){
         document.getElementById("category").innerHTML = 
-        "The category is 'Bad Ass Words'"
+        "The category is 'Bad Words'"
     }
     return answer
 }
