@@ -57,21 +57,18 @@ body{
       text-decoration: underline;
       text-decoration-style: wavy;
   }
-  h3{
+h3{
       float: right;
       padding-top: 10%;
       padding-right: 5%;
-  }
-  h4{
+}
+h4{
       float: left;
       padding-top: 10%;
       padding-left: 5%;
-  }
-  /* #guesswordcontainer{
-    text-align: center;
-    display: flexbox;
-  } */
-  .buttonstyle{
+}
+
+.buttonstyle{
       color: coral;
       margin: 1%;
       background-color: black;
@@ -85,17 +82,25 @@ body{
 
       
   }
-  
-  #reset{
+#reset{
       margin-bottom: 5%;
   }
-@media (max-width: 100px){
+@media (max-width: 50px){
 body{
     background-color: white;
     color: black; 
-    display: inline-flexbox;
+    display: flexbox;
 }
 .buttonstyle{
-    display: inline-flexbox;
+    font-size: 10%;
+    padding: 5px;
+    /* display: inline-flexbox; */
 }
+#guesswordcontainer {
+  padding-top: 0%;
+}
+h1 h2{
+  display: inline-block;
+}
+
 }
