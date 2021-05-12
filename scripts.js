@@ -55,9 +55,9 @@ let picksWord = () => {
 }
 
 let guessWord = () =>{
-    // sets value of guesswordstatus and swaps letters for underlines
+    // checks value of word and swaps letters for underlines
     word = answer.split("").map(letter => 
-        (predictionArr.indexOf(letter) >= 0 ? letter : "#")).join("")
+        (predictionArr.indexOf(letter) >= 0 ? letter : " _ ")).join("")
         document.getElementById("answer").innerHTML = word
         if(word === answer){
             // winning condition
@@ -68,9 +68,7 @@ let guessWord = () =>{
 
     let buttonClicked = (clickedButton, e) =>{
         predictionArr.indexOf(clickedButton) === -1 ? predictionArr.push(clickedButton) : null; //if button clicked doesn't exist in predictionArr push clicked button to array and set button null
-        console.log(predictionArr, clickedButton)
         if(answer.indexOf(clickedButton) >= 0){ // if clicked button is correct update word to display button selected
-            console.log(answer)
             document.getElementById("blink").innerHTML = "Good guess"
             guessWord()
         }if((answer.indexOf(clickedButton) === -1) && (predictionArr.includes(clickedButton) === true)){
@@ -80,6 +78,9 @@ let guessWord = () =>{
             document.getElementById("lives").innerHTML = `Lives: ${lives}`
         }if(lives <= 0){
             document.getElementById("blink").innerHTML = "YOU LOSE GAME OVER"
+            document.getElementById("answer").innerHTML = `Correct answer was "${answer}"`
+
+
             setTimeout(reset, 7000)
         }
         
