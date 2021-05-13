@@ -1,7 +1,7 @@
 
 let letters = ["A","B","C","D","E","F","G","H"
 ,"I","J","K","L","M","N","O","P","Q","R"
-,"S","T","U","V","W","X","Y","Z", ]
+,"S","T","U","V","W","X","Y","Z",]
 let chars = () => {
     // creates letter buttons in the window
     for (let i = 0; i < letters.length; i++){
@@ -42,15 +42,15 @@ let picksWord = () => {
         document.querySelector("img").src = 
         "images/olympics.png"
         document.getElementById("category").innerHTML = 
-        "The category is 'Olympics'"
+        "The category is 'Olympics Sports'"
     }else if (chosenCategory === answerBank[1]){
         document.querySelector("img").src = 
         "images/giphy.gif"
         document.getElementById("category").innerHTML = 
-        "The category is 'Drake'"
+        "The category is 'Drake Songs'"
     }else if (chosenCategory === answerBank[2]){
         document.getElementById("category").innerHTML = 
-        "The category is 'Bad Words'"
+        "The category is 'Random Words'"
     }
     return answer
 }
@@ -68,8 +68,10 @@ let guessWord = () =>{
     }
 
     let buttonClicked = (clickedButton, e) =>{
-        predictionArr.indexOf(clickedButton) === -1 ? predictionArr.push(clickedButton) : null; //if button clicked doesn't exist in predictionArr push clicked button to array and set button null
-        if(answer.indexOf(clickedButton) >= 0){ // if clicked button is correct update word to display button selected
+        //if button clicked doesn't exist in predictionArr button is pushed to array and removd from board
+        predictionArr.indexOf(clickedButton) === -1 ? predictionArr.push(clickedButton) : null; 
+        if(answer.indexOf(clickedButton) >= 0){ 
+            // if clicked button exist in answer string update word to display button selected by calling the guessWord func
             document.getElementById("blink").innerHTML = "Good guess"
             guessWord()
         }if((answer.indexOf(clickedButton) === -1) && (predictionArr.includes(clickedButton) === true)){
@@ -102,18 +104,10 @@ let guessWord = () =>{
     picksWord()
     guessWord()
     
-    // TODO add api from giphy
-    // let url = "http://api.giphy.com/v1/gifs/search?q=drake&api_key=Z5fGhHGaZZT33f028vt42A4ZyJCbEALG&limit=5" 
-    // fetch(`${url}`  )
-    //             .then(res => res.json())
-    //         .then(Json => {
-    //              open(Json.data[0].url)
-                   
-    //             })       
-    //           .catch( err => console.log(err, " error here")) 
+    
     // TODO 
     // style with hangman replica ??
-    // make for mobile devices
+    
     
     
     
