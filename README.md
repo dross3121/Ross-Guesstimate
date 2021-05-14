@@ -4,7 +4,7 @@
 
 ---
 
-[Guessitmate](https://dross3121.github.io/Ross-Guesstimate/) is a single page gaming application. that allows a user ten chances to guess the hidden word correctly.
+[Guessitmate](https://dross3121.github.io/Ross-Guesstimate/) is a single page gaming application. that allows a user ten chances to guess the hidden random word correctly. 
 
 
 
@@ -38,7 +38,8 @@
 
 ---
 ## Hurdles
-- working through how I needed to pass my event listner an argument so that it was able to check that the argument against the hidden word
+- working through how I needed to pass my event listner an argument so that it was able to check that the argument against the hidden word ex:
+![image of Guesstimate](images/codesnippet.png)
 - having to re-evaulate my appoarch so my code logic made sense to someone readin my code
 - having code that can easily be reusable for futurre projects and can be scaled up if needed or scalled down
 - making guesstimate mobile friendly was a big deal to me because most people play games on they phones or tablets
