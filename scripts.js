@@ -115,9 +115,6 @@ let inspectWord = () =>{
     inspectWord()
     
     
-    // TODO 
-    // style with hangman replica ??
-    
     
     
     
