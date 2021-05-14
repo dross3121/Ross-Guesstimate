@@ -113,7 +113,7 @@ let inspectWord = () =>{
     chars()
     picksWord()
     inspectWord()
-    ___
+
     
     
     
