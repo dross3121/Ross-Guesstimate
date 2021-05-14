@@ -15,7 +15,7 @@
 ---
 ## Installtion Instructions
 - Fork this repository
-- requires Node.js v14.16.0. or later
+- Requires Node.js v14.16.0. or later
 - HTML 5 
 
 ---
@@ -34,12 +34,18 @@
 
 ## Add-ons
 - Third party Api to render random image related to category
-- auto filler function added to hint button to fill in A hidden space randomly 
+- Auto filler function added to hint button to fill in A hidden space randomly 
 
 ---
 ## Hurdles
-- working through how I needed to pass my event listner an argument so that it was able to check that the argument against the hidden word ex:
+- Working through how I needed to pass my event listner an argument so that it was able to check that the argument against the hidden word ex:
 ![image of Guesstimate](images/codesnippet.png)
-- having to re-evaulate my appoarch so my code logic made sense to someone readin my code
-- having code that can easily be reusable for futurre projects and can be scaled up if needed or scalled down
-- making guesstimate mobile friendly was a big deal to me because most people play games on they phones or tablets
+- Having to re-evaulate my appoarch so my code logic made sense to someone readin my code
+- Learning to think through my code ex: use dev tools to de-bug, completed smaller parts of the larger problem not tryign to solve the bigger problem
+- Laving code that can easily be reusable for futurre projects and can be scaled up if needed or scaled down
+- Making guesstimate mobile friendly was a big deal to me because most people play games on they phones or tablets
+---
+## Take aways
+- Use best practices im not re-creating the wheel
+- Write code thats easily readable so i can read it easily 
+- Knowing what tools i have was the biggest take away, becoming familair with with array and string methods to manipulate my data was so key in my learning during this project
