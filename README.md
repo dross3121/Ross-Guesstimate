@@ -8,15 +8,15 @@
 
 
 
-## Technologies used
+## Technology used
 - Javascript
 - HTML
 - CSS
 ---
 ## Installtion Instructions
 - Fork this repository
--
--
+- requires Node.js v14.16.0. or later
+- HTML 5 
 
 ---
 
