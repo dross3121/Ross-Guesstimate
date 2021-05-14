@@ -37,7 +37,6 @@ let picksWord = () => {
     // selects a random category and random word from that catgory and displays picture associated with that category
     let chosenCategory = answerBank[Math.floor(Math.random() * answerBank.length)]
     answer = chosenCategory[Math.floor(Math.random() * chosenCategory.length)].toUpperCase()
-    console.log(answer)
     if(chosenCategory === answerBank[0]){
         document.querySelector("img").src = 
         "images/olympics.png"
@@ -52,11 +51,22 @@ let picksWord = () => {
         document.getElementById("category").innerHTML = 
         "The category is 'Random Words'"
     }
+    let getHint = document.getElementById("hint")
+    getHint.addEventListener("click", function(){
+        if(chosenCategory === answerBank[0]){
+            document.getElementById("insertHintHere").innerHTML = "Hints: The Name of an Olympic Sport"   
+        }if(chosenCategory === answerBank[1]){
+            document.getElementById("insertHintHere").innerHTML = "Hints: The Name an of A popular Drake Song"
+        }if(chosenCategory === answerBank[2]){
+            document.getElementById("insertHintHere").innerHTML = "Hints: Try using A vowel 'A, E, I , O , U , Y'"
+        }
+        })
+
     return answer
 }
 
-let guessWord = () =>{
-    // checks value of word and swaps letters for underlines
+let inspectWord = () =>{
+    // checks if letter is in the answer and displays it if it exist else it remiains hidden
     word = answer.split("").map(letter => 
         (predictionArr.indexOf(letter) >= 0 ? letter : " _ ")).join("")
         document.getElementById("answer").innerHTML = word
@@ -73,7 +83,7 @@ let guessWord = () =>{
         if(answer.indexOf(clickedButton) >= 0){ 
             // if clicked button exist in answer string update word to display button selected by calling the guessWord func
             document.getElementById("blink").innerHTML = "Good guess"
-            guessWord()
+            inspectWord()
         }if((answer.indexOf(clickedButton) === -1) && (predictionArr.includes(clickedButton) === true)){
             document.getElementById("blink").innerHTML = "Try Again"
             lives -=1
@@ -102,7 +112,7 @@ let guessWord = () =>{
     
     chars()
     picksWord()
-    guessWord()
+    inspectWord()
     
     
     // TODO 
