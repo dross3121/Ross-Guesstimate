@@ -13,4 +13,20 @@
 - HTML
 - CSS
 ---
+## User Stories
+-
+-
+-
+---
 ## Installtion Instructions
+- Fork this repository
+-
+-
+---
+## Wireframes
+[Google Doc of wireframe](https://docs.google.com/document/d/1sDWWR4G57eXfvCDN2fk3K1ZAthn2AzUCIkTu5LJbSKU/edit?usp=sharing)
+---
+## Eureka Moments
+-
+-
+-
