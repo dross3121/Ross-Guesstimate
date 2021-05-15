@@ -4,7 +4,7 @@
 
 ---
 
-[Guessitmate](https://dross3121.github.io/Ross-Guesstimate/) is a single page gaming application. that allows a user ten chances to guess the hidden random word correctly. 
+[Guessitmate](https://dross3121.github.io/Ross-Guesstimate/) is a single page gaming application. That allows a user ten chances to guess the hidden random word correctly. User is giving a "Hint" option and any key that that has been selected will be removed from the board.
 
 
 
@@ -42,10 +42,10 @@
 ![image of Guesstimate](images/codesnippet.png)
 - Having to re-evaulate my appoarch so my code logic made sense to someone readin my code
 - Learning to think through my code ex: use dev tools to de-bug, completed smaller parts of the larger problem not tryign to solve the bigger problem
-- Laving code that can easily be reusable for futurre projects and can be scaled up if needed or scaled down
 - Making guesstimate mobile friendly was a big deal to me because most people play games on they phones or tablets
 ---
 ## Take aways
-- Use best practices im not re-creating the wheel
-- Write code thats easily readable so i can read it easily 
-- Knowing what tools i have was the biggest take away, becoming familair with with array and string methods to manipulate my data was so key in my learning during this project
+- Remember to use best practices. "I'm not re-creating the wheel"
+- Write code thats easily readable 
+- Knowing what tools I have was the biggest take away, becoming familair with with array and string methods to manipulate my data was so key in my learning during this project
+- Having code that can easily be reusable for futurre projects and can be scaled up if needed or scaled down
