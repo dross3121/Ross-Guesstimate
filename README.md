@@ -32,7 +32,7 @@
 
 ---
 
-## Add-ons
+## Future Add-ons
 - Third party Api to render random image related to category
 - Auto filler function added to hint button to fill in A hidden space randomly 
 
