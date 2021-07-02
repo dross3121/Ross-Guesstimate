@@ -40,7 +40,7 @@
 ## Hurdles
 - Working through how I needed to pass my event listner an argument so that it was able to check that the argument against the hidden word ex:
 ![image of Guesstimate](images/codesnippet.png)
-- Having to re-evaulate my appoarch so my code logic made sense to someone readin my code
+- Having to re-evaulate my appoarch so my code logic made sense to someone reading my code
 - Learning to think through my code ex: use dev tools to de-bug, completed smaller parts of the larger problem not tryign to solve the bigger problem
 - Making guesstimate mobile friendly was a big deal to me because most people play games on they phones or tablets
 ---
